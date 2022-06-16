@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Evergreen</title>
+</head>
+<body>
+    <div class="container-fluid"id="container">
+        <div class="row">
+            <div class="col-sm-6 col-12"id="icon_logo">
+                <img src="./leaf.png" alt="logo"width="50px"height="50px">
+                <p style="margin-top:7px;">Evergreen</p>
+            </div>
+            <div class="col-sm-6 col-12"id="nav">
+                <li>Home</li>
+                <li>Service</li>
+                <li>Help</li>
+                <li>About</li>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 image_container">
+                <p class="content"id="content">“Away, away, from men and towns,
+                    To the wild wood and the downs, —
+                    To the silent wilderness,
+                    Where the soul need not repress its music.”</p>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Pacifico&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    
+    #container{
+    border:1px solid black;
+    
+}
+#icon_logo{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    gap:10px;
+    justify-content: center;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap:20px;
+    font-size: 20px;    
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#nav li:hover{
+    color:green;
+    cursor: pointer;
+}
+
+.image_container{
+    height:70vh;
+    background-image: url('./trees-3822149_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    color:white;
+    font-family: 'Bebas Neue';
+    font-size: 2.2em;
+    padding:10px;
+}
+
+</style>
+
+<script>
+    let off = 0;
+    window.addEventListener("DOMContentLoaded",function(){
+        off = document.body.offsetWidth;
+        let content = document.getElementById("content");
+        if(off>=864&&off<=1500){
+            console.log(off);
+            content.style.fontSize = "40px";
+        }
+        else if(off>=1501&&off<=2900){
+            content.style.fontSize = "70px";
+        }
+    })
+</script>
